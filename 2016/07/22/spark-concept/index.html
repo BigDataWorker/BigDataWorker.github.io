@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="spark," />
 
 
 
@@ -84,12 +84,28 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="BigDataWorker">
-<meta property="og:url" content="https://bigdataworker.github.io/archives/index.html">
+<meta name="description" content="1、基本概念
+RDD（resillient distributed dataset）：弹性分布式数据集。
+Task ：具体执行任务。Task 分为ShuffleMapTask 和 ResultTask两种。ShuffleMapTask和ResultTask 分别类似于Hadoop 中的Map 和Reduce。
+Job：用户提交的作业。一个Job可能由一到多个 Task 组成。
+Stage：Job分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spark基本概念与架构">
+<meta property="og:url" content="https://bigdataworker.github.io/2016/07/22/spark-concept/index.html">
 <meta property="og:site_name" content="BigDataWorker">
+<meta property="og:description" content="1、基本概念
+RDD（resillient distributed dataset）：弹性分布式数据集。
+Task ：具体执行任务。Task 分为ShuffleMapTask 和 ResultTask两种。ShuffleMapTask和ResultTask 分别类似于Hadoop 中的Map 和Reduce。
+Job：用户提交的作业。一个Job可能由一到多个 Task 组成。
+Stage：Job分">
+<meta property="og:updated_time" content="2016-07-22T09:21:04.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BigDataWorker">
+<meta name="twitter:title" content="spark基本概念与架构">
+<meta name="twitter:description" content="1、基本概念
+RDD（resillient distributed dataset）：弹性分布式数据集。
+Task ：具体执行任务。Task 分为ShuffleMapTask 和 ResultTask两种。ShuffleMapTask和ResultTask 分别类似于Hadoop 中的Map 和Reduce。
+Job：用户提交的作业。一个Job可能由一到多个 Task 组成。
+Stage：Job分">
 
 
 
@@ -110,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="https://bigdataworker.github.io/archives/"/>
+  <link rel="canonical" href="https://bigdataworker.github.io/2016/07/22/spark-concept/"/>
 
-  <title> 归档 | BigDataWorker </title>
+  <title> spark基本概念与架构 | BigDataWorker </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,7 +149,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -211,140 +227,154 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 3 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/27/deploy/" itemprop="url">
-              
-                <span itemprop="name">spark部署模式</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-27T09:39:18+08:00"
-              content="2016-07-27" >
-          07-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/22/spark-concept/" itemprop="url">
-              
-                <span itemprop="name">spark基本概念与架构</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-22T16:37:51+08:00"
-              content="2016-07-22" >
-          07-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/07/22/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-07-22T13:52:01+08:00"
-              content="2016-07-22" >
-          07-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                spark基本概念与架构
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-22T16:37:51+08:00" content="2016-07-22">
+              2016-07-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/spark/" itemprop="url" rel="index">
+                    <span itemprop="name">spark</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1、基本概念"><a href="#1、基本概念" class="headerlink" title="1、基本概念"></a>1、基本概念</h3><ul>
+<li>RDD（resillient distributed dataset）：弹性分布式数据集。</li>
+<li>Task ：具体执行任务。Task 分为ShuffleMapTask 和 ResultTask两种。ShuffleMapTask和ResultTask 分别类似于Hadoop 中的Map 和Reduce。</li>
+<li>Job：用户提交的作业。一个Job可能由一到多个 Task 组成。</li>
+<li>Stage：Job分成的阶段。一个 Job可能被划分为一到多个 Stage。</li>
+<li>Partition：数据分区。即一个 RDD的数据可以划分为多少个分区。</li>
+<li>NarrowDependency ：窄依赖，即子RDD依赖于父RDD中固定的Partition。Narrow-Dependency 分为OneToOneDependency 和RangeDependency 两种。</li>
+<li>ShuffleDependency ：shuffle 依赖，也称为宽依赖，即子 RDD对父RDD中的所有Partition 都有依赖。</li>
+<li>DAG（directed acycle graph）：有向无环图。用于反映各 RDD之间的依赖关系。</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/spark/" rel="tag">#spark</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/22/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/27/deploy/" rel="prev" title="spark部署模式">
+                spark部署模式 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -352,6 +382,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -371,8 +405,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -422,6 +465,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、基本概念"><span class="nav-number">1.</span> <span class="nav-text">1、基本概念</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -518,11 +572,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   
